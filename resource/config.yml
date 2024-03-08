@@ -8,9 +8,9 @@ dbconf:
      #用户名
      username: root
      #密码
-     password: root
+     password: 123456
      #数据库名
-     database: gofly_enterprise
+     database: gofly_single
      #数据表前缀
      prefix: 
 jwt:
@@ -34,7 +34,7 @@ app:
      # Gin 框架在运行的时候默认是debug模式 有： 开发：debug，生产：release，测试模式：test
      runlogtype: debug
      # 配置代码生成时-前端代码根目录位置(开发必改)
-     vueobjroot: D:/Project/develop/vue/gofly_enterprise/business
+     vueobjroot: /Users/qiang.lilq/interesting/web/vue/gofly_admin/business
      #配置企业私有仓网址
      companyPrivateHouse: 
      # 配置根域名访问重定向路径,默认是业务端后台

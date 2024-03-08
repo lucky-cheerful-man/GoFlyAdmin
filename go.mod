@@ -17,7 +17,6 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.19
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.9.1
-	github.com/pquerna/ffjson v0.0.0-20190930134022-aa0246cd15f7
 	github.com/spf13/viper v1.13.0
 	github.com/u2takey/ffmpeg-go v0.4.1
 	go.uber.org/zap v1.17.0

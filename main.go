@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"gofly/bootstrap"
-	"gofly/global"
 	"runtime"
 	"strconv"
+
+	"gofly/bootstrap"
+	"gofly/global"
 )
 
 func main() {
@@ -24,14 +25,14 @@ func main() {
 	// fmt.Println("data_config:\t", string(data_config))
 	// fmt.Println("config.Database.Driver=", conf.App.Port)
 	//加载配置
-	cpu_num, _ := strconv.Atoi(global.App.Config.App.CPUnum)
+	cpuNum, _ := strconv.Atoi(global.App.Config.App.CPUnum)
 	mycpu := runtime.NumCPU()
-	if cpu_num > mycpu { //如果配置cpu核数大于当前计算机核数，则等当前计算机核数
-		cpu_num = mycpu
+	if cpuNum > mycpu { //如果配置cpu核数大于当前计算机核数，则等当前计算机核数
+		cpuNum = mycpu
 	}
-	if cpu_num > 0 {
-		runtime.GOMAXPROCS(cpu_num)
-		global.App.Log.Info(fmt.Sprintf("当前计算机核数: %v个,调用：%v个", mycpu, cpu_num))
+	if cpuNum > 0 {
+		runtime.GOMAXPROCS(cpuNum)
+		global.App.Log.Info(fmt.Sprintf("当前计算机核数: %v个,调用：%v个", mycpu, cpuNum))
 	} else {
 		runtime.GOMAXPROCS(mycpu)
 		global.App.Log.Info(fmt.Sprintf("当前计算机核数: %v个,调用：%v个", mycpu, mycpu))
